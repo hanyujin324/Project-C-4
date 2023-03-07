@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
+  <style>
+    body{
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // root만들기
+    let div=document.createElement('div');
+    document.body.appendChild(div);
+    div.setAttribute('id','root')
+    // 루트안에 타이틀, 네비,메인, 푸터
+/*     for(let i=0;i<3;i++){
+      let makeDiv=document.createElement('div');
+      root.appendChild(makeDiv);
+    }  */
+    let root=document.getElementById('root');
+    root.style.cssText="display:flex; flex-direction:column; width:100vw; height:100vh; background-color:rgb(234, 230, 194)"
+
+    //타이틀
+    let title=document.createElement('div');
+    title.setAttribute('class','title');
+    root.appendChild(title);
+    title.style.cssText="display:flex; width:100%; height:15%; background-color:rgb(234, 230, 194);font-size:20px; padding-top:100px "
+    //title>p
+    let titlep=document.createElement('p');
+    title.appendChild(titlep);
+    titlep.textContent="강지민과 소녀들"
+    titlep.style.cssText="font-size: 30px; margin-left: 50px;color: rgb(224, 178, 26); text-align: center;text-shadow: 1px 1px rgb(241, 195, 68);"
+
+    //네비
+    let nav=document.createElement('div');
+    nav.setAttribute('class','nav');
+    root.appendChild(nav);
+    nav.style.cssText="width:100%; height:10%; background-color:rgb(250, 244, 182)"
+
+    //네비안에 있는 리스트
+    let ul=document.createElement('ul');
+    nav.appendChild(ul);
+    let li=document.createElement('li');
+    ul.appendChild(li);
+    li.style.cssText="display:inline-block;"
+    //리스트 작성
+    li.textContent="✔팀:강지민과 소녀들(팀장:박수연, 팀원:김은아, 강지민, 한유진, 정희은)"
+    let litwo=document.createElement('li');
+    ul.appendChild(litwo);
+    litwo.style.cssText="display:inline-block;"
+    litwo.textContent="✔사는 곳: 대전광역시"
+    let lith=document.createElement('li');
+    ul.appendChild(litwo);
+    lith.style.cssText="display:inline-block;"
+    lith.textContent="✔나이:24"
+
+
+
+
+    //메인
+    let main=document.createElement('div');
+    main.setAttribute('class','main');
+    root.appendChild(main);
+    main.style.cssText="width:100%; height:65%; flex-direction:column; background-color:khaki; margin:30px; font-family: 'Noto Serif KR',serif;"
+    //메인안에 2개의 박스
+    //1
+    let onediv=document.createElement('div');
+    onediv.setAttribute('class','box1')
+    main.appendChild(onediv);
+    onediv.style.cssText="width:100%; height:40%;margin-top:30px; background-color:rgb(148, 143, 69)"
+    //main>box1>p
+    let mainpo=document.createElement('p');
+    onediv.appendChild(mainpo);
+    mainpo.textContent="취미:재즈듣기"; 
+
+
+    //2
+    let twodiv=document.createElement('div');
+    twodiv.setAttribute('class','box2')
+    main.appendChild(twodiv);
+    twodiv.style.cssText="width:100%; margin-top:30px; height:40%; background-color:rgb(148, 143, 69)"
+
+
+    //푸터
+    let footer=document.createElement('div');
+    footer.setAttribute('class','footer');
+    root.appendChild(footer);
+    footer.style.cssText="width:100%; height:10%; background-color:rgb(234, 222, 94)"
+
+
+
+  </script>
+</body>
+</html>
